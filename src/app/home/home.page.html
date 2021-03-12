@@ -22,17 +22,17 @@
 
   <ion-item>
     <ion-label position="floating">Apellido</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="apellido"></ion-input>
   </ion-item>
     
   <ion-item>
     <ion-label position="fixed">celular</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="celular"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="stacked">Email</ion-label>
-    <ion-input></ion-input>
+    <ion-input [(ngModel)]="email"></ion-input>
   </ion-item>
 
   <ion-button color="success" (click)="guardarDatos()">
@@ -41,9 +41,25 @@
   
 
   <ion-list>
-    <ion-item *ngFor="let usuario of usuarios" >
+
+
+    <ion-item *ngFor="let usuario of usuarios; let i = index" >
       <ion-label>{{ usuario.nombre }}</ion-label>
+      <ion-label>{{ usuario.apellido }}</ion-label>
+      <ion-label>{{ usuario.celular }}</ion-label>
+      <ion-label>{{ usuario.email }}</ion-label>
+
+      
+      <ion-button color="danger" clear (click)="eliminarDatos(i)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" clear (click)="editarDatos(i)">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
     </ion-item>
+
+
+
   </ion-list>
 
   
