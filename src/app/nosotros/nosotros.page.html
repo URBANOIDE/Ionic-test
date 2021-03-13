@@ -1,11 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>nosotros</ion-title>
+    <ion-title>OPERACIONES</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-button routerLink="/home">
-    ir a Inicio
+    VOLVER
   </ion-button>
+
+  <ion-item>
+    <ion-label position="floating">NUMERO 1</ion-label>
+    <ion-input [(ngModel)]="numero1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">OPERACION</ion-label>
+    <ion-input [(ngModel)]="operacion"></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-label position="floating">NUMERO 2</ion-label>
+    <ion-input [(ngModel)]="numero2"></ion-input>
+  </ion-item>
+
+  <ion-button color="success" (click)="calcular()">
+    CALCULAR
+  </ion-button>
+
+  
 </ion-content>
