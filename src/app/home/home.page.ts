@@ -46,21 +46,25 @@ export class HomePage {
         {
           name: 'name1',
           type: 'text',
+          placeholder: 'NOMBRE',
           value: this.usuarios[i].nombre
         },
         {
           name: 'apellido1',
           type: 'text',
+          placeholder: 'APELLIDO',
           value: this.usuarios[i].apellido
         },
         {
           name: 'celular1',
           type: 'text',
+          placeholder: 'CELULAR',
           value: this.usuarios[i].celular
         },
         {
           name: 'email1',
           type: 'text',
+          placeholder: 'EMAIL',
           value: this.usuarios[i].email
         },
       ],
